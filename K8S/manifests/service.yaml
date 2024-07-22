@@ -7,10 +7,9 @@ metadata:
     app: go-web-app-srihari 
 spec:
   ports:
-  - port: 80
-    targetport: 8080
-    protocol: TCP
+    - port: 80
+      targetPort: 8080
+      protocol: TCP
   selector:
     app: go-web-app-srihari
   type: ClusterIP
-   
