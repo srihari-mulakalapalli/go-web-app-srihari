@@ -12,6 +12,7 @@ func homePage(w http.ResponseWriter, r *http.Request) {
 
 func coursePage(w http.ResponseWriter, r *http.Request) {
 	// Render the course html page
+	log.Println("Accessed /courses")
 	http.ServeFile(w, r, "static/courses.html")
 }
 
@@ -26,6 +27,7 @@ func contactPage(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
+	log.Println("Starting server on http://localhost:8080...")
 
 	http.HandleFunc("/home", homePage)
 	http.HandleFunc("/courses", coursePage)
