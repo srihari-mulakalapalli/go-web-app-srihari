@@ -1,0 +1,22 @@
+#This is a sample deployment file for simple web application.
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: go-web-app-srihari
+  labels:
+    app: go-web-app-srihari
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: go-web-app-srihari
+  template:
+    metadata:
+      labels:
+        app: go-web-app-srihari
+    spec:
+      containers:
+      - name: go-web-app-srihari
+        image: srihari25/go-web-app-srihari:v1
+        ports:
+        - containerPort: 8080 
